@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="Studdashboard.css">
+<title>Student Dashboard</title>
+
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="left-section">
+      <h1>CSE-A Dashboard</h1>
+    </div>
+    <div class="right-section">
+      <button onclick="toggleAssignments()">Show Assignments</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  
+  <div class="file-input-container">
+    <input type="file" id="fileInput">
+    <label for="fileInput" class="file-input-label">Choose File</label>
+  </div>
+
+  <!-- Add Assignments Container -->
+  <div id="assignmentsContainer" style="display: none;"></div>
+
+  <!-- Add a file input for assignment submission -->
+  
+
+  <script src="Studdashboard.js"></script>
+</body>
+
+</html>
+
+

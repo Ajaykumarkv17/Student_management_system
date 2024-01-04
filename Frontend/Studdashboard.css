@@ -1,0 +1,86 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .left-section h1 {
+    margin: 0;
+  }
+  
+  .right-section button {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  #assignmentsContainer {
+    margin: 20px;
+  }
+  
+  .assignment-card {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .assignment-card h2 {
+    margin-top: 0;
+  }
+  
+  .assignment-card a {
+    color: #3498db;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .assignment-card a:hover {
+    text-decoration: underline;
+  }
+  .file-input-container {
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  /* Style for file input button */
+  #fileInput {
+    display: none;
+  }
+  
+  .file-input-label {
+    padding: 8px;
+    background-color: aquamarine;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  /* Style to visually enhance the file input button */
+  .file-input-label:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Style to show selected file name */
+  .selected-file {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  
+  

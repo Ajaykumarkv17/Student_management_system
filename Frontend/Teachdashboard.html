@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="Teachdash.css">
+  <title>Teacher Dashboard</title>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="left-section">
+      <h1>CSE-A Dashboard</h1>
+    </div>
+    <div class="right-section">
+      <button onclick="toggleAddStudents()">Add Students</button>
+      <button onclick="toggleAddAssignments()">Add Assignments</button>
+      <button onclick="togglelogout()">Logout</button>
+    </div>
+  </div>
+
+  <!-- Add a button to show submissions -->
+<br>
+<br>
+<button onclick="toggleshowSubmissions()">Show Submissions</button>
+
+<!-- Add a container to display submissions -->
+<div id="submissionsContainer" style="display: none;"></div>
+
+
+  <!-- Add Students Card -->
+  <div id="addStudentsCard" class="add-card" style="display:none;">
+    <h2>Add Students</h2>
+    <form id="addStudentsForm">
+      <label for="studentId">Select Student:</label>
+      <select id="studentId" name="studentId" required>
+        <!-- Dropdown options will be populated dynamically using JavaScript -->
+      </select>
+      <br>
+      <br>
+      <label for="className">Class Name:</label>
+      <input type="text" id="className" name="className" required>
+      <br>
+      <button type="submit">Add Student</button>
+    </form>
+  </div>
+
+  <!-- Add Assignments Card -->
+  <div id="addAssignmentsCard" class="add-card" style="display:none;">
+    <h2>Add Assignments</h2>
+    <form id="addAssignmentsForm">
+      <label for="assignmentid">Assignment-id</label>
+      <input type="text" id="assignmentid" required>
+
+      <br>
+      <label for="assignmentid">Teacher-id</label>
+      <input type="text" id="teacherid" required>
+      
+      <br>
+
+      <label for="assignmentName">Assignment Name:</label>
+      <input type="text" id="assignmentName" name="assignmentName" required>
+
+      <label for="assignmentDescription">Description:</label>
+      <textarea id="assignmentDescription" name="assignmentDescription" required></textarea>
+      
+      
+      <button type="submit">Add Assignment</button>
+    </form>
+  </div>
+  <div id="showfeedback" class="add-card" style="display:none;">
+    <h2>Show Feedbacks</h2>
+    <form id="showfeedbackform">
+      <label for="assignmentName">Assignment title</label>
+      <input type="text" id="assignmentName" name="assignmentName" required>
+
+      <label for="assignmentDescription">Description:</label>
+      <textarea id="assignmentDescription" name="assignmentDescription" required></textarea>
+      
+      
+      <button type="submit">Add Assignment</button>
+    </form>
+  </div>
+
+
+  <script src="teachdash.js"></script>
+</body>
+
+</html>
