@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const addAssignmentsCard = document.getElementById('addAssignmentsCard');
     const addStudentsForm = document.getElementById('addStudentsForm');
     const addAssignmentsForm = document.getElementById('addAssignmentsForm');
+    const showsubmissionform=document.getElementById('submissionsContainer');
     fetch('http://localhost:3000/getRegisteredStudents')
     .then(response => response.json())
     .then(students => {
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Toggle visibility of Add Students card
     window.toggleAddStudents = function () {
       addAssignmentsCard.style.display = 'none';
+      showsubmissionform.style.display='none';
       addStudentsCard.style.display = addStudentsCard.style.display === 'none' ? 'block' : 'none';
     };
     window.togglelogout = function () {
@@ -31,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Toggle visibility of Add Assignments card
     window.toggleAddAssignments = function () {
       addStudentsCard.style.display = 'none';
+      showsubmissionform.style.display='none';
       addAssignmentsCard.style.display = addAssignmentsCard.style.display === 'none' ? 'block' : 'none';
     };
     
@@ -101,8 +104,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Fetch submissions from the server
         
         addStudentsCard.style.display='none';
-        addAssignmentsCard.style.display = 'none';
-        submissionsContainer.style.display = addStudentsCard.style.display === 'none' ? 'block' : 'none';
+        addAssignmentsCard.style.display ='none';
+        submissionsContainer.style.display ='block';
         const teache_id = localStorage.getItem('teacher_id');
         fetch('http://localhost:3000/getSubmissions')
             
