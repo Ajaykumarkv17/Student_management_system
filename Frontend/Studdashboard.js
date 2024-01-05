@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     const assignmentsContainer = document.getElementById('assignmentsContainer');
     window.logout = function () {
-        
         sessionStorage.clear();
-        window.location.href = 'Dashboard.html'; // Replace 'login.html' with your actual login page
+        window.location.href = 'Dashboard.html'; // 
       };
-    // Fetch assignments from the server
+   
     fetch('http://localhost:3000/getTeacherAssignments')
       .then(response => response.json())
       .then(assignments => {
         displayAssignments(assignments);
       })
+
       .catch(error => console.error('Error fetching assignments:', error));
   
     function displayAssignments(assignments) {
-      // Clear previous content
+      
       assignmentsContainer.innerHTML = '';
   
       // Iterate through assignments and create HTML elements
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const submitButton = document.createElement('button');
         submitButton.textContent = 'Submit Assignment';
         submitButton.onclick = function () {
-        submitAssignment(assignment.id); // Pass assignment ID to the submission function
+        submitAssignment(assignment.id); 
       };
 
         
@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
   
         assignmentsContainer.appendChild(assignmentCard);
       });
-    }
+
+}
   
     // Function to toggle the visibility of assignments
     window.toggleAssignments = function () {
@@ -65,15 +66,16 @@ document.addEventListener('DOMContentLoaded', function () {
         // Perform the submission using fetch
         fetch('http://localhost:3000/addSubmission', {
             method: 'POST',
+
             headers: {
               'Content-Type': 'application/json',
             },
+
             body: JSON.stringify({
               assignmentId:12345,
               studentId:53,
               file:"10thmarks.pdf"
-              
-            }),
+              }),
         })
           .then(response => response.json())
           .then(data => {

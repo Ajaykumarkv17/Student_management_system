@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const option = document.createElement('option');
         option.value = student.id;
         option.textContent = student.name;
+        
         studentIdDropdown.appendChild(option);
         
       });

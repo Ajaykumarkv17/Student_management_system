@@ -137,12 +137,10 @@ app.post('/addAssignment', (req, res) => {
 
 // Endpoint to get submissions
 app.get('/getSubmissions', (req, res) => {
-    const sql = `
-      SELECT submissions.*, assignments.assignmentName AS assignment_title, students.username AS student_name
+    const sql = ` SELECT submissions.*, assignments.assignmentName AS assignment_title, students.username AS student_name
       FROM submissions
       JOIN assignments ON submissions.assignment_id = assignments.id
-      JOIN students ON submissions.student_id = students.id
-    `;
+      JOIN students ON submissions.student_id = students.id `;
   
     db.query(sql, (err, result) => {
       if (err) {
